@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title
+%
+\input{settings.tex}
+\maketitle
+\thispagestyle{empty}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Empty page after title page.
+% %
+% \hbox{}\par\vfill\centerline%
+%    {THIS PAGE INTENTIONALLY LEFT BLANK}%
+%    \vfill\thispagestyle{empty}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sammanfattning (Abstract på svenska)
+%
+\setcounter{page}{1}
+\chapter*{Sammanfattning}
+\thispagestyle{plain}
+\addcontentsline{toc}{chapter}{\numberline{}Sammmanfattning}%
+\subimport{../frontmatters/}{sammanfattning.tex}
+  \begin{keywords}
+    \subimport{../frontmatters/}{nyckelord.tex}
+  \end{keywords}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract (Sammanfattning på engelska)
+%
+
+\chapter*{Abstract}
+\thispagestyle{plain}
+\addcontentsline{toc}{chapter}{\numberline{}Abstract}%
+\begin{otherlanguage}{english}
+\subimport{../frontmatters/}{abstract.tex}
+  \begin{keywords}
+    \subimport{../frontmatters/}{keywords.tex}
+  \end{keywords}
+\end{otherlanguage}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgement
+%
+\chapter*{Tackord}
+\thispagestyle{plain}
+\addcontentsline{toc}{chapter}{\numberline{}Tackord}%
+\subimport{../frontmatters/}{acknowledgments.tex}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contents
+%
+\tableofcontents
+\thispagestyle{plain}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% List of Figures
+%
+
+\listoffigures
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% List of Tables
+%
+
+\listoftables
+\cleardoublepage
